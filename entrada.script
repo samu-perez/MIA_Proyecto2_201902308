@@ -1,9 +1,10 @@
 #Pruebas Proyecto 2
-#exec -path=/home/samuel/Escritorio/Go/Proyecto2/entrada.script
+#exec -path=/home/samuel/Documentos/GitHub/MIA_Proyecto2_201902308/entrada.script
 rmdisk -path=/home/samuel/Escritorio/discoPrueba.dsk
 mkdisk -size=3 -path=/home/samuel/Escritorio/discoPrueba.dsk -unit=m
 fdisk -type=P -unit=m -size=1 -fit=BF -path="/home/samuel/Escritorio/discoPrueba.dsk" -name=ParticionX
 mount -path=/home/samuel/Escritorio/discoPrueba.dsk -name=ParticionX
-rep -id=08a1 -path="/home/samuel/Escritorio/Go/Proyecto2/Disk.pdf" -name=disk
+rep -id=08a1 -path="/home/samuel/Documentos/GitHub/MIA_Proyecto2_201902308/reportes/Disk.pdf" -name=disk
 mkfs -id=08a1 -type=full
-rep -id=08a1 -path="/home/samuel/Escritorio/Go/Proyecto2/Tree.pdf" -name=tree
+#rep -id=08a1 -path="/home/samuel/Documentos/GitHub/MIA_Proyecto2_201902308/reportes/Tree.pdf" -name=tree
+#rep -id=08a2 -path="/home/samuel/Documentos/GitHub/MIA_Proyecto2_201902308/reportes/Tree.pdf" -name=tree

@@ -1,0 +1,21 @@
+digraph grafica{
+rankdir=TB;
+node [shape = record, style=filled, fillcolor=orange];
+nodo0:f0 -> nodo1
+nodo0:f6 -> node0
+nodo0[ shape=record, label ="{/|{<f0> 1|<f1>-1|<f2> -1|<f3> -1|<f4> -1|<f5>-1|<f6>0|<f7> -1}}"];
+nodo1:f0 -> nodo2
+nodo1[ shape=record, label ="{hola|{<f0> 2|<f1>-1|<f2> -1|<f3> -1|<f4> -1|<f5>-1|<f6>1|<f7> -1}}"];
+nodo2:f0 -> nodo3
+nodo2[ shape=record, label ="{mundo|{<f0> 3|<f1>-1|<f2> -1|<f3> -1|<f4> -1|<f5>-1|<f6>2|<f7> -1}}"];
+nodo3[ shape=record, label ="{go|{<f0> -1|<f1>-1|<f2> -1|<f3> -1|<f4> -1|<f5>-1|<f6>3|<f7> -1}}"];
+node0:f1->  nodex0
+node0[shape=record, label="{ dd /|{<f0> users.txt| <f1> 0} |{-1 | } |{-1 | } |{-1 | } |{-1 | } |{*1 | <f10>  }}"];
+
+nodex0[shape=record, label="{Inodo0|{0| <f0> }|{-1| <f1> }|{-1 | <f2> }|{-1| <f3> }|{*-1 | <f4> }}"];
+nodex0 :f0-> data0
+data0[shape=record, label="{File block | <f1> 1,G,root
+1,U,root,123
+}}"];
+
+}

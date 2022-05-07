@@ -1,0 +1,53 @@
+mkdisk -size=3 -path=/home/samuel/Escritorio/discoPrueba.dsk -unit=m
+mkdisk -path=/home/samuel/Escritorio/discoPrueba2.dsk -size=30
+
+rmdisk -path=/home/samuel/Escritorio/discoPrueba.dsk
+Error
+rmdisk -path=/home/samuel/Escritorio/discoPrueba3.dsk
+
+FDISK -unit=k
+fdisk -type=P -unit=m -size=1 -fit=BF -path="/home/samuel/Escritorio/discoPrueba.dsk" -name=ParticionX
+fdisk -type=P -size=100 -fit=BF -path="/home/samuel/Escritorio/discoPrueba.dsk" -name=ParticionY
+fdisk -type=P -unit=b -size=500 -path="/home/samuel/Escritorio/discoPrueba.dsk" -name=ParticionZ
+fdisk -type=E -unit=b -size=500 -path="/home/samuel/Escritorio/discoPrueba.dsk" -name=ParticionZa
+fdisk -type=L -unit=b -size=300 -fit=BF -path="/home/samuel/Escritorio/discoPrueba.dsk" -name=ParticionZb
+fdisk -type=L -unit=b -size=100 -fit=BF -path="/home/samuel/Escritorio/discoPrueba.dsk" -name=ParticionZbb
+fdisk -type=P -unit=b -size=500 -fit=BF -path="/home/samuel/Escritorio/discoPrueba.dsk" -name=miParticion
+
+fdisk -type=P -unit=b -size=100 -fit=BF -path="/home/samuel/Escritorio/discoPrueba2.dsk" -name=ParticionX
+Errores
+fdisk -type=P -unit=m -size=10 -fit=BF -path="/home/samuel/Escritorio/discoPrueba2.dsk" -name=ParticionX
+
+mount -path=/home/samuel/Escritorio/discoPrueba.dsk -name=ParticionX
+mount -path=/home/samuel/Escritorio/discoPrueba.dsk -name=ParticionY
+mount -path=/home/samuel/Escritorio/discoPrueba.dsk -name=ParticionZ
+mount -path=/home/samuel/Escritorio/discoPrueba.dsk -name=ParticionZa
+mount -path=/home/samuel/Escritorio/discoPrueba.dsk -name=ParticionZb
+mount -path=/home/samuel/Escritorio/discoPrueba.dsk -name=miParticion
+
+
+REPORTES
+rep -id=08a1 -path="/home/samuel/Documentos/GitHub/MIA_Proyecto2_201902308/reportes/Disk.pdf" -name=disk
+rep -id=08a1 -path=/home/samuel/Documentos/GitHub/MIA_Proyecto2_201902308/reportes/Disk.jpg -name=disk
+
+MKFS
+mkfs -id=08a1 -type=full
+mkfs -id=08a2 -type=fast
+
+login -usuario=root -password=123 -id=08a1
+login -usuario=root -password=123 -id=08a2
+
+mkdir -p -path=/bin
+mkdir -p -path=/usr
+mkdir -path=/usrix/test/true
+mkdir -p -path=/hola
+mkdir -path=/hola/mundo/go
+
+
+mkfile -r -size=15 -path="/home/txt/doc.txt" 
+mkfile -r -SIZE=65 -path="/home/txt/doc2.txt"
+mkfile -r -SIZE=400 -path="/home/txt/doc3.txt"
+
+rep -id=08a1 -path="/home/samuel/Documentos/GitHub/MIA_Proyecto2_201902308/reportes/File.pdf" -name=file -ruta="/home/txt/doc.txt"
+rep -id=08a1 -path="/home/samuel/Documentos/GitHub/MIA_Proyecto2_201902308/reportes/File.pdf" -name=file -ruta="/home/txt/doc2.txt"
+rep -id=08a1 -path="/home/samuel/Documentos/GitHub/MIA_Proyecto2_201902308/reportes/File.pdf" -name=file -ruta="/home/txt/doc3.txt"
